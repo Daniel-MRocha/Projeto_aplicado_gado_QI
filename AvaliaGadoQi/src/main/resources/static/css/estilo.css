@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    padding-top: 70px;
+    padding-left: 33%;
+
+}
+
+#logo{
+    width: 400px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+#principal{
+    width: 400px;
+    border:solid 2px black;
+}
+
+#titulo{
+    border: solid 2px red;
+}
+
+#container{
+    display: flex;
+    justify-items: auto;
+}
+
+#menu{
+    border: solid 2px red;
+}
+
+#dados{
+    border: solid 2px red;
+}
+
+#pe{
+    border: solid 2px red;
+}
