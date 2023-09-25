@@ -9,11 +9,15 @@ body{
 
 #logo{
     width: 400px;
-    height: 52px;
+    height: 55px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 7px;
 }
+ .head_logo{
+    width: 55px;
+    width: 55px;
+ }
 
 #principal{
     width: 400px;
