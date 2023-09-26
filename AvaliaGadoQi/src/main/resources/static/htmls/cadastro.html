@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Machado da Rocha">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>Avalia gado</title>
+</head>
+<body>
+    <header id="logo">
+        <img class="head_logo" src="../imgs/logApp.png" alt="">
+        Protótipo Avalia gado
+        <img class="head_logo" src="../imgs/logoprojeto.png" alt="">
+    </header>
+    <main id="principal">
+    <header id="titulo">Cadastro de animal</header>
+        <div id="container">
+            <aside id="menu">
+                <a href="../index.html"><button>Status do rebanho</button></a>
+                <button>Modificar animal</button>
+            </aside>
+            <form>
+                <table>
+                    <tr>
+                        <td>Identificação do animal:</td>
+                        <td>numero vindo do backend</td>
+                    </tr>
+                    <tr>
+                        <td>Data de nascimento:</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Gênero:</td>
+                        <td>
+                                <input type="radio"  value="1" name="form_genero" checked>Macho</option>
+                                <input type="radio"  value="2" name="form_genero">Fêmea</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Peso:</td>
+                        <td> <input type="number" name="form_peso" min="0" max="1800"> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Limpar"></td>
+                        <td><input type="submit" value="Salvar"></td>
+                    </tr>
+                </table>
+            </form>
+            </section>
+        </div>
+   
+</main>
+</body>
+</html>
