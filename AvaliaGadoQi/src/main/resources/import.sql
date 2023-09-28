@@ -1,0 +1,1 @@
+insert into TB_GENERO (COD,GENERO) values (1,'Macho') , (2, 'Fêmea');
