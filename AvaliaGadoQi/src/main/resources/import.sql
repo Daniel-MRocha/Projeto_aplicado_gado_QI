@@ -1,1 +1,13 @@
 insert into TB_GENERO (COD,GENERO) values (1,'Macho') , (2, 'Fêmea');
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2023-10-10',430,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2020-07-15',350.678,2);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2022-12-07',45.5,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2021-02-10',287,2);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2020-10-17',220.650,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2020-12-19',307,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2022-10-05',225,2);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2023-04-26',35,2);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2021-10-10',180.7,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2020-10-10',360.8,2);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2021-01-04',155,1);
+insert into TB_BOVINO (DATA_NASC,PESO,COD_GEN) values ('2022-09-02',168,1);
