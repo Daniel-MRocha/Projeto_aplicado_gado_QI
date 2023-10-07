@@ -25,7 +25,7 @@ body{
 }
 
 #titulo{
-    border: solid 2px red;
+    border: solid 1px black;
 }
 
 #container{
@@ -34,20 +34,32 @@ body{
 }
 
 #menu{
-    border: solid 2px red;
     display: flex;
     flex-direction: column;
-    
-    
     padding: 7px 7px;
+    border: solid 1px black;
 }
 
 #dados{
     display:flex;
     flex-grow: 1;
-    border: solid 2px red;
+    border: solid 1px black;
 }
 
 #pe{
-    border: solid 2px red;
+    display: flex;
+    align-items: center;
+}
+
+.etiqueta{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.informacoes{
+    background-color: rgb(231, 228, 187);
+    padding-left: 5px; 
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
 }

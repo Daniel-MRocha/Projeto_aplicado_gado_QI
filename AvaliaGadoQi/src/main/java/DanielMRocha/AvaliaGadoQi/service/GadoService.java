@@ -44,6 +44,7 @@ public class GadoService {
                 .count());
 
 
+        //Dados de Machos de 0 a 12
         dash.setTotalMachos0a12((int) lista_processar.stream()
                 .filter(e-> e.getGenero() == 1 )
                 .filter(e-> e.getMeses()<=12)
@@ -57,15 +58,81 @@ public class GadoService {
                 .reduce(BigDecimal.ZERO,BigDecimal::add)
         );
 
-        dash.setTotalMachos0a12Preco(dash.getTotalMachos0a12Peso().multiply(BovinoDto.cotBezMach).setScale(2, DOWN));
+        dash.setTotalMachos0a12Preco(lista_processar.stream()
+                .filter(e -> e.getGenero()==1)
+                .filter(e -> e.getMeses()<=12)
+                .map(e -> e.getPreco())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
 
 
+
+        //Dados de Machos com mais de 12
         dash.setTotalMachos12Mais((int) lista_processar.stream()
                 .filter(e-> e.getGenero() == 1 )
                 .filter(e-> e.getMeses()>12)
                 .count());
 
+        dash.setTotalMachos12MaisPeso(lista_processar.stream()
+                .filter(e -> e.getGenero()==1)
+                .filter(e -> e.getMeses()>12)
+                .map(e -> e.getPeso())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
 
+        dash.setTotalMachos12MaisPreco(lista_processar.stream()
+                .filter(e -> e.getGenero()==1)
+                .filter(e -> e.getMeses()>12)
+                .map(e -> e.getPreco())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
+
+        //Dados de Fêmeas de 0 a 12
+        dash.setTotalFemeas0a12((int) lista_processar.stream()
+                .filter(e-> e.getGenero() == 2 )
+                .filter(e-> e.getMeses()<=12)
+                .count());
+
+
+        dash.setTotalFemeas0a12Peso(lista_processar.stream()
+                .filter(e -> e.getGenero()==2)
+                .filter(e -> e.getMeses()<=12)
+                .map(e -> e.getPeso())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
+
+        dash.setTotalFemeas0a12Preco(lista_processar.stream()
+                .filter(e -> e.getGenero()==2)
+                .filter(e -> e.getMeses()<=12)
+                .map(e -> e.getPreco())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
+
+
+        //Dados de Fêmeas com mais de 12
+        dash.setTotalFemeas12Mais((int) lista_processar.stream()
+                .filter(e-> e.getGenero() == 2 )
+                .filter(e-> e.getMeses()>12)
+                .count());
+
+        dash.setTotalFemeas12MaisPeso(lista_processar.stream()
+                .filter(e -> e.getGenero()==2)
+                .filter(e -> e.getMeses()>12)
+                .map(e -> e.getPeso())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
+
+        dash.setTotalFemeas12MaisPreco(lista_processar.stream()
+                .filter(e -> e.getGenero()==2)
+                .filter(e -> e.getMeses()>12)
+                .map(e -> e.getPreco())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
+
+        dash.setTotalRebanhoPreco(lista_processar.stream()
+                .map(e -> e.getPreco())
+                .reduce(BigDecimal.ZERO,BigDecimal::add)
+        );
 
 
         return dash;
