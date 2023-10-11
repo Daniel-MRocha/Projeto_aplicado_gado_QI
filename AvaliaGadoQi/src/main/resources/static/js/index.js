@@ -2,17 +2,18 @@ let urlDashboard = "http://localhost:8080/Dashboard"
 
 let dash = null
 
-function dados() {
-    fetch(urlDashboard)
+async function dados() {
+    await fetch(urlDashboard)
         .then(resposta => resposta.json())
         .then(resp => {
            dash = resp
         })
 }
 
-dados()
+dados().then(()=> seedDashboard())
 
     function seedDashboard(){
+
         let tagAlvo = document.querySelector("#info0")
         tagAlvo.innerHTML = dash.totalRebanho 
         
@@ -63,7 +64,6 @@ dados()
 
     }
 
-    setTimeout(()=> seedDashboard(),750)
 
 
 
