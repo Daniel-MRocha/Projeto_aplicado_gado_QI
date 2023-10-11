@@ -12,6 +12,8 @@ async function dados() {
 
 dados().then(()=> seedDashboard())
 
+
+
     function seedDashboard(){
 
         let tagAlvo = document.querySelector("#info0")

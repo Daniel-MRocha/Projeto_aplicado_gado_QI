@@ -20,15 +20,16 @@
                 <a href="../index.html"><button>Status do rebanho</button></a>
                 <button>Modificar animal</button>
             </aside>
-            <form>
+            <form id="form_cadastro" method="post" action="http://localhost:8080/Bovinos">
                 <table>
                     <tr>
                         <td>Identificação do animal:</td>
-                        <td>numero vindo do backend</td>
+                        <td id="bovino_numero"></td>
+                        
                     </tr>
                     <tr>
                         <td>Data de nascimento:</td>
-                        <td><input type="date"></td>
+                        <td><input type="date" name="form_datanas"></td>
                     </tr>
                     <tr>
                         <td>Gênero:</td>
@@ -43,13 +44,15 @@
                     </tr>
                     <tr>
                         <td><input type="reset" value="Limpar"></td>
-                        <td><input type="submit" value="Salvar"></td>
+                        <td><input type="submit" value="Salvar" id="btn_gravar"></td>
                     </tr>
                 </table>
+                <input type="hidden" name="btn_id_escondido" id="btn_id_escondido">
             </form>
             </section>
         </div>
    
 </main>
+<script src="../js/cadastro.js" defer></script>
 </body>
 </html>

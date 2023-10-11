@@ -3,6 +3,7 @@ package DanielMRocha.AvaliaGadoQi.service;
 import DanielMRocha.AvaliaGadoQi.dtos.BovinoDto;
 import DanielMRocha.AvaliaGadoQi.dtos.DashBoardDto;
 import DanielMRocha.AvaliaGadoQi.entity.Bovino;
+import DanielMRocha.AvaliaGadoQi.entity.Genero;
 import DanielMRocha.AvaliaGadoQi.repository.GadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -137,4 +138,9 @@ public class GadoService {
 
         return dash;
     }
+
+    public void s_Cadastra(Bovino bov){
+        gr.save(bov);
+    }
+
 }
