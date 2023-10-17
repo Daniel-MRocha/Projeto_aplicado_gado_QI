@@ -13,6 +13,7 @@ body{
     justify-content: space-between;
     margin-bottom: 7px;
 }
+
  .head_logo{
     width: 55px;
     width: 55px;
@@ -48,6 +49,8 @@ body{
     display:flex;
     flex-grow: 1;
     border: solid 1px black;
+    font-size: 13px;
+    font-weight: 200;
 }
 
 #pe{
@@ -67,3 +70,25 @@ body{
     display: flex;
     justify-content: center;
 }
+
+#btn_deleta{
+    background-color: crimson;
+    font-style:oblique;
+    color: azure;
+}
+
+#btn_atualiza{
+    background-color: blue;
+    font-style: oblique;
+    color:antiquewhite
+}
+
+
+
+
+
+
+
+
+
+

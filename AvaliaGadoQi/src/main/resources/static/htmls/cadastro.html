@@ -17,38 +17,39 @@
     <header id="titulo">Cadastro de animal</header>
         <div id="container">
             <aside id="menu">
-                <a href="../index.html"><button>Status do rebanho</button></a>
-                <button>Modificar animal</button>
+                <a href="../index.html"><button class="btns">Status do rebanho</button></a>
+                <a href="../htmls/modificar.html"> <button class="btns"> Modificar animal </button> </a>
             </aside>
-            <form id="form_cadastro" method="post" action="http://localhost:8080/Bovinos">
-                <table>
-                    <tr>
-                        <td>Identificação do animal:</td>
-                        <td id="bovino_numero"></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Data de nascimento:</td>
-                        <td><input type="date" name="form_datanas"></td>
-                    </tr>
-                    <tr>
-                        <td>Gênero:</td>
-                        <td>
-                                <input type="radio"  value="1" name="form_genero" checked>Macho</option>
-                                <input type="radio"  value="2" name="form_genero">Fêmea</option>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Peso:</td>
-                        <td> <input type="number" name="form_peso" min="0" max="1800"> </td>
-                    </tr>
-                    <tr>
-                        <td><input type="reset" value="Limpar"></td>
-                        <td><input type="submit" value="Salvar" id="btn_gravar"></td>
-                    </tr>
-                </table>
-                <input type="hidden" name="btn_id_escondido" id="btn_id_escondido">
-            </form>
+            <section id="dados">
+                <form id="form_cadastro" method="post" action="http://localhost:8080/Bovinos">
+                    <table>
+                        <tr>
+                            <td>Identificação:</td>
+                            <td id="bovino_numero"></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Nascimento:</td>
+                            <td><input type="date" name="form_datanas"></td>
+                        </tr>
+                        <tr>
+                            <td>Gênero:</td>
+                            <td>
+                                    <input type="radio"  value="1" name="form_genero" checked>Macho</option>
+                                    <input type="radio"  value="2" name="form_genero">Fêmea</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Peso:</td>
+                            <td> <input type="number" name="form_peso" min="0" max="1800"> </td>
+                        </tr>
+                        <tr>
+                            <td><input class="btns" type="reset" value="Limpar"></td>
+                            <td><input class="btns" type="submit" value="Salvar" id="btn_gravar"></td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="btn_id_escondido" id="btn_id_escondido">
+                </form>
             </section>
         </div>
    

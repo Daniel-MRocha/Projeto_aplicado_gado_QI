@@ -13,6 +13,7 @@ body{
     justify-content: space-between;
     margin-bottom: 7px;
 }
+
  .head_logo{
     width: 55px;
     width: 55px;
@@ -25,7 +26,7 @@ body{
 }
 
 #titulo{
-    border: solid 2px red;
+    border: solid 1px black;
 }
 
 #container{
@@ -34,17 +35,48 @@ body{
 }
 
 #menu{
-    border: solid 2px red;
     display: flex;
     flex-direction: column;
-    
-    
     padding: 7px 7px;
+    border: solid 1px black;
+}
+
+.btns{
+    margin: 2px 2px;
 }
 
 #dados{
     display:flex;
     flex-grow: 1;
-    border: solid 2px red;
+    border: solid 1px black;
+    font-size: 13px;
+    font-weight: 200;
 }
+
+#pe{
+    display: flex;
+    align-items: center;
+}
+
+.etiqueta{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.informacoes{
+    background-color: rgb(231, 228, 187);
+    padding-left: 5px; 
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
 

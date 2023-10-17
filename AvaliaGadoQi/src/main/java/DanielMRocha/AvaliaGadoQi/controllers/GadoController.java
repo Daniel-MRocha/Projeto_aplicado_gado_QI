@@ -14,6 +14,7 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/")
@@ -37,8 +38,15 @@ public class GadoController {
         return todosDtos;
     }
 
-    
-
+    @GetMapping("/Bovinos/{numero}")
+    public BovinoDto trazUm(@PathVariable long numero){
+        var elemento = gs.apenasUm(numero);
+        if(elemento.isPresent()){
+            return new BovinoDto(elemento.get());
+        }else{
+            return null;
+        }
+    }
     @PostMapping("/Bovinos")
     public ModelAndView grava(@RequestParam int btn_id_escondido, @RequestParam LocalDate form_datanas, @RequestParam int form_genero, @RequestParam String form_peso){
 

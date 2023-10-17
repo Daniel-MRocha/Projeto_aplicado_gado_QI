@@ -13,6 +13,7 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.math.RoundingMode.DOWN;
 
@@ -26,6 +27,10 @@ public class GadoService {
         List<Bovino> lista = new ArrayList<>();
         lista = gr.findAll();
         return lista;
+    }
+
+    public Optional<Bovino> apenasUm(Long num){
+        return gr.findById(num);
     }
 
     public DashBoardDto seedDashBoard(){

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Machado da Rocha">
+    <link rel="stylesheet" href="../css/modificar.css">
+    <title>Avalia gado</title>
+</head>
+<body>
+    <header id="logo">
+        <img class="head_logo" src="../imgs/logApp.png" alt="">
+        Protótipo Avalia gado
+        <img class="head_logo" src="../imgs/logoprojeto.png" alt="">
+    </header>
+    <main id="principal">
+    <header id="titulo">Modificar de animal</header>
+        <div id="container">
+            <aside id="menu">
+                <a href="../index.html"> <button class="btns">Status do rebanho</button> </a>
+                <a href="../htmls/cadastro.html"> <button class="btns">Cadastrar animal</button> </a>
+            </aside>
+            <section id="dados">
+                
+                    <table>
+                        <tr>
+                            <td>Identificação:</td>
+                            <td><input type="number" name="bovino_id" id="bovino_id"></td>
+                            <td><button id="btn_busca" class="btns" onclick="busca()">Busca</button></td>
+                        </tr>
+                        <tr id="rej_busca" aria-colspan="3" style="color: brown; display:inline; flex-wrap: nowrap;"></tr>
+                
+                        <tr id="linha_peso">
+                        </tr>
+                        <tr>
+                            <td><button id="btn_deleta" class="btns" disabled="true" onclick = "deleta()" > Deleta</button></td>
+                            <td><button id="btn_atualiza" class="btns" disabled="true">Atualiza</button></td>
+                        </tr>
+                    </table>
+            </section>
+        </div>
+   
+</main>
+<script src="../js/modificar.js" defer></script>
+</body>
+</html>
