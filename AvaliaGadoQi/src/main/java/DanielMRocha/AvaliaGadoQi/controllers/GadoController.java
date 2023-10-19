@@ -47,6 +47,8 @@ public class GadoController {
             return null;
         }
     }
+
+
     @PostMapping("/Bovinos")
     public ModelAndView grava(@RequestParam int btn_id_escondido, @RequestParam LocalDate form_datanas, @RequestParam int form_genero, @RequestParam String form_peso){
 
@@ -58,6 +60,20 @@ public class GadoController {
             bov.setPeso(new BigDecimal(form_peso).setScale(3, RoundingMode.DOWN));
         gs.s_Cadastra(bov);
         return new ModelAndView("redirect:/index.html");
+    }
+
+    @GetMapping("/Bovinos/del/{numero}")
+    public void deleta(@PathVariable long numero){
+        var bov = gs.apenasUm(numero).get();
+        gs.s_deleta(bov);
+    }
+
+
+    @PostMapping(value = "/Bovinos/up")
+    public void modifica_peso(@RequestParam String id, @RequestParam String peso){
+        Bovino bovAlterado = gs.apenasUm(Long.valueOf(id)).get();
+        bovAlterado.setPeso(new BigDecimal(peso));
+        gs.s_Cadastra(bovAlterado);
     }
 
     @GetMapping("/Dashboard")

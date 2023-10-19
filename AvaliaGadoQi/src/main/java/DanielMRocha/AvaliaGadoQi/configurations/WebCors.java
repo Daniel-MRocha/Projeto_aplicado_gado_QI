@@ -8,6 +8,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebCors implements WebMvcConfigurer {
 
     public void addCorsMapping(CorsRegistry reg){
-        reg.addMapping("/**");
+        reg.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedHeaders("*")
+                .allowedMethods("GET,POST,OPTIONS")
+                .allowCredentials(true);
+
     }
 }

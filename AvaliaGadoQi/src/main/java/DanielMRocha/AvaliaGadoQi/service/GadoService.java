@@ -148,4 +148,8 @@ public class GadoService {
         gr.save(bov);
     }
 
+    public void s_deleta(Bovino bov){
+        gr.delete(bov);
+    }
+
 }

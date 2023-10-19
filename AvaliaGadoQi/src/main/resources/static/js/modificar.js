@@ -64,10 +64,36 @@ let buscado
 
 
     function deleta(){
-        console.log(buscado.id)
-
+        let url_deleta = "http://localhost:8080/Bovinos/del/" + buscado.id
+        let resultado =  fetch(url_deleta)
+        resultado.then(() =>{alert("Deletado!!")})
+            .then(() => window.location = "http://localhost:8080")
     }
 
+    let test = null
+
+    function modifica_peso(){
+
+        const id_bov = "id=" + buscado.id
+        const peso_novo = document.getElementById("caixa_p").value
+
+        const enviar_update = id_bov +"&peso="+ peso_novo
+        
+
+        const informacaoRequest = {
+            method:'POST',
+            headers: {
+                "Content-Type":"application/x-www-form-urlencoded"
+            },
+            body: enviar_update    
+        }
+
+        subir = () => fetch("http://localhost:8080/Bovinos/up", informacaoRequest)
+        .then(() => alert("Peso alterado"))
+        .then(()=> window.location="http://locahost:8080")
+
+        subir()
+    }
 
     
 
