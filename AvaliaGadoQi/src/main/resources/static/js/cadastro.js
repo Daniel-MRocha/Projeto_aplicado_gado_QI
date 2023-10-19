@@ -4,8 +4,16 @@
 let pegaNumero = async () => {
     let dados_bovinos = await fetch('http://localhost:8080/Bovinos')
     let array_bovino = await  dados_bovinos.json()    
-        return array_bovino.length
-        }
+    let maior = 0 
+
+        array_bovino.forEach(ele =>{
+            if(ele.id>maior){
+                maior = ele.id
+            }
+        })
+
+        return maior
+    }
             
 
 
