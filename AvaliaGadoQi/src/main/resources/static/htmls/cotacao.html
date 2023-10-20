@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Machado da Rocha">
+    <link rel="stylesheet" href="../css/cotacao.css">
+    <title>Avalia gado</title>
+</head>
+<body>
+    <header id="logo">
+        <img class="head_logo" src="../imgs/logApp.png" alt="">
+        Protótipo Avalia gado
+        <img class="head_logo" src="../imgs/logoprojeto.png" alt="">
+    </header>
+    <main id="principal">
+    <header id="titulo">Cotações</header>
+        <div id="container">
+            <aside id="menu">
+                <a href="../index.html"> <button class="btns">Status do rebanho</button> </a>
+            </aside>
+            <section id="dados">
+                
+                    <table>
+                        <form action="http://localhost:8080/Cot" method="POST">
+                        <tr>
+                            <td>Boi gordo:</td>
+                            <td><input type="text" name="cotBoi"></td>
+                        </tr>
+                        <tr>
+                            <td>Vaca:</td>
+                            <td><input type="text" name="cotVaca"></td>
+                        </tr>
+                        <tr>
+                            <td>Terneiro/12M:</td>
+                            <td><input type="text" name="cotTerO"></td>
+                        </tr>
+                        <tr>
+                            <td>Terneira/12M:</td>
+                            <td><input type="text" name="cotTerA"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="submit" value="Salva">
+                            <input type="reset" value="Limpa">
+                            </td>
+                        </tr>
+                        </form>
+                    </table>
+            </section>
+        </div>
+   
+</main>
+<script src="../js/cotacao.js" defer></script>
+</body>
+</html>

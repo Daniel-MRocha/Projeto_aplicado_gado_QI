@@ -59,6 +59,7 @@ let buscado
 
     function reject_busca(){
         let local = document.getElementById("rej_busca")
+        local.style.fontSize = 10
         local.innerHTML="Animal inexistente"
     }
 
@@ -90,7 +91,7 @@ let buscado
 
         subir = () => fetch("http://localhost:8080/Bovinos/up", informacaoRequest)
         .then(() => alert("Peso alterado"))
-        .then(()=> window.location="http://locahost:8080")
+        .then(()=> window.location="http://localhost:8080")
 
         subir()
     }

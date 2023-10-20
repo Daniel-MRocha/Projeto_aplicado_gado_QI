@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static DanielMRocha.AvaliaGadoQi.dtos.BovinoDto.*;
+
 @RestController
 @RequestMapping("/")
 public class GadoController {
@@ -80,4 +82,23 @@ public class GadoController {
     public DashBoardDto dash_dados(){
         return gs.seedDashBoard();
     }
+
+
+    @PostMapping("/Cot")
+    public ModelAndView cotacoes_update(@RequestParam String cotBoi, @RequestParam String cotVaca, @RequestParam String cotTerO,@RequestParam String cotTerA){
+        setCotBoi(new BigDecimal(cotBoi).setScale(2,RoundingMode.DOWN));
+        setCotVac(new BigDecimal(cotVaca).setScale(2,RoundingMode.DOWN));
+        setCotBezMach(new BigDecimal(cotTerO).setScale(2,RoundingMode.DOWN));
+        setCotBezFem(new BigDecimal(cotTerA).setScale(2,RoundingMode.DOWN));
+        return new ModelAndView("redirect:index.html");
+    }
+
+    @GetMapping("/Cot")
+    public List<String> cotacoes(){
+        var lista = List.of(cotBoi.toString(),cotVac.toString(),cotBezMach.toString(),cotBezFem.toString());
+        return lista;
+    }
 }
+
+
+

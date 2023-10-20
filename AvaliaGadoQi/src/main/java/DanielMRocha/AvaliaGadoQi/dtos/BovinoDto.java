@@ -20,7 +20,8 @@ public class BovinoDto {
     private int genero;
     private BigDecimal preco;
 
-
+    @Deprecated
+    public BovinoDto(){}
     public BovinoDto(Bovino bov){
         id = bov.getCod();
         meses = ChronoUnit.MONTHS.between(bov.getData_nasc(),LocalDate.now());
@@ -68,5 +69,21 @@ public class BovinoDto {
     }
     public BigDecimal getPreco() {
         return preco;
+    }
+
+    public static void setCotBoi(BigDecimal cotBoi) {
+        BovinoDto.cotBoi = cotBoi;
+    }
+
+    public static void setCotVac(BigDecimal cotVac) {
+        BovinoDto.cotVac = cotVac;
+    }
+
+    public static void setCotBezMach(BigDecimal cotBezMach) {
+        BovinoDto.cotBezMach = cotBezMach;
+    }
+
+    public static void setCotBezFem(BigDecimal cotBezFem) {
+        BovinoDto.cotBezFem = cotBezFem;
     }
 }

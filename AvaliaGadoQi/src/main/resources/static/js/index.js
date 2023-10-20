@@ -1,6 +1,12 @@
 let urlDashboard = "http://localhost:8080/Dashboard"
+let urlCotacao = "http://localhost:8080/Cot"
 
 let dash = null
+let cots = null
+
+const dinheiro = new Intl.NumberFormat("pt-BR", {
+    minimumFractionDigits:2
+});
 
 async function dados() {
     await fetch(urlDashboard)
@@ -10,6 +16,13 @@ async function dados() {
         })
 }
 
+async function cotacoes(){
+    await fetch(urlCotacao)
+            .then(resp => resp.json())
+            .then(resp => {cots = resp})
+}
+
+cotacoes().then(()=> cotacao_rodape())
 dados().then(()=> seedDashboard())
 
 
@@ -29,7 +42,7 @@ dados().then(()=> seedDashboard())
         tagAlvo.innerHTML = dash.totalMachos0a12Peso
     
         tagAlvo = document.querySelector("#info4")
-        tagAlvo.innerHTML = dash.totalMachos0a12Preco
+        tagAlvo.innerHTML = dinheiro.format(dash.totalMachos0a12Preco)
 
         tagAlvo = document.querySelector("#info5")
         tagAlvo.innerHTML = dash.totalMachos12Mais
@@ -38,7 +51,7 @@ dados().then(()=> seedDashboard())
         tagAlvo.innerHTML = dash.totalMachos12MaisPeso
 
         tagAlvo = document.querySelector("#info7")
-        tagAlvo.innerHTML = dash.totalMachos12MaisPreco
+        tagAlvo.innerHTML = dinheiro.format(dash.totalMachos12MaisPreco)
 
         tagAlvo = document.querySelector("#info8")
         tagAlvo.innerHTML = dash.totalFemeas
@@ -50,7 +63,7 @@ dados().then(()=> seedDashboard())
         tagAlvo.innerHTML = dash.totalFemeas0a12Peso
 
         tagAlvo = document.querySelector("#info11")
-        tagAlvo.innerHTML = dash.totalFemeas0a12Preco
+        tagAlvo.innerHTML = dinheiro.format(dash.totalFemeas0a12Preco)
 
         tagAlvo = document.querySelector("#info12")
         tagAlvo.innerHTML = dash.totalFemeas12Mais
@@ -59,12 +72,26 @@ dados().then(()=> seedDashboard())
         tagAlvo.innerHTML = dash.totalFemeas12MaisPeso
 
         tagAlvo = document.querySelector("#info14")
-        tagAlvo.innerHTML = dash.totalFemeas12MaisPreco
+        tagAlvo.innerHTML = dinheiro.format(dash.totalFemeas12MaisPreco)
 
         tagAlvo = document.querySelector("#info15")
-        tagAlvo.innerHTML = dash.totalRebanhoPreco
+        tagAlvo.innerHTML = dinheiro.format(dash.totalRebanhoPreco)
 
     }
+
+function cotacao_rodape(){
+
+        tagAlvo = document.querySelector("#info16")
+        tagAlvo.innerHTML = cots[0]
+
+        tagAlvo = document.querySelector("#info17")
+        tagAlvo.innerHTML = cots[1]
+
+        tagAlvo = document.querySelector("#info18")
+        tagAlvo.innerHTML = cots[2]
+        tagAlvo = document.querySelector("#info19")
+        tagAlvo.innerHTML = cots[3]
+}
 
 
 
